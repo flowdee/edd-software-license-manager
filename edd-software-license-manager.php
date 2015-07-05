@@ -10,7 +10,7 @@
  * Domain Path:     /languages
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
- * General Public License version 2, as published by the Free Software Foundation. You may NOT assume
+ * General Public License version 3, as published by the Free Software Foundation. You may NOT assume
  * that you can use any other version of the GPL.
  *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
@@ -18,7 +18,7 @@
  *
  * @author          flowdee <coder@flowdee.de>
  * @copyright       Copyright (c) flowdee
- * @license         http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license         http://www.gnu.org/licenses/gpl-3.0.html
  */
 
 // Exit if accessed directly
@@ -80,8 +80,10 @@ if( !class_exists( 'EDD_SLM' ) ) {
             define( 'EDD_SLM_URL', plugin_dir_url( __FILE__ ) );
 
             // SLM Credentials
-            define( 'EDD_SLM_API_URL', 'http://dev.flowdee.de/plugins' );
-            define( 'EDD_SLM_API_SECRET', '557d4a56a640d0.38082942' );
+            $api_url = rtrim(edd_get_option( 'edd_slm_api_url' ), '/');
+
+            define( 'EDD_SLM_API_URL', $api_url );
+            define( 'EDD_SLM_API_SECRET', edd_get_option( 'edd_slm_api_secret' ) );
         }
 
 
@@ -100,16 +102,16 @@ if( !class_exists( 'EDD_SLM' ) ) {
             }
 
             // Include files and scripts
+            require_once EDD_SLM_DIR . 'includes/helper.php';
+
             if ( is_admin() ) {
-                //require_once EDD_SLM_DIR . 'includes/meta-boxes.php';
-                //require_once EDD_SLM_DIR . 'includes/settings.php';
+                require_once EDD_SLM_DIR . 'includes/meta-boxes.php';
+                require_once EDD_SLM_DIR . 'includes/settings.php';
             }
 
             require_once EDD_SLM_DIR . 'includes/emails.php';
             require_once EDD_SLM_DIR . 'includes/purchase.php';
-            //require_once EDD_SLM_DIR . 'includes/functions.php';
         }
-
 
         /**
          * Internationalization
@@ -121,8 +123,7 @@ if( !class_exists( 'EDD_SLM' ) ) {
         public function load_textdomain() {
 
             // Load the default language files
-            load_plugin_textdomain( 'edd-slm', false, 'edd-slm/languages' );
-
+            load_plugin_textdomain( 'edd-slm', false, 'edd-software-license-manager/languages' );
         }
         
         /*
@@ -133,11 +134,20 @@ if( !class_exists( 'EDD_SLM' ) ) {
          * @return void
          */
         public static function activation() {
-            
+            // nothing
+        }
+
+        /*
+         * Uninstall function fires when the plugin is being uninstalled.
+         *
+         * @since  1.0.0
+         * @access public
+         * @return void
+         */
+        public static function uninstall() {
             // nothing
         }
     }
-
 
     /**
      * The main function responsible for returning the one true EDD_SLM
@@ -149,15 +159,15 @@ if( !class_exists( 'EDD_SLM' ) ) {
     function EDD_SLM_load() {
 
         return EDD_SLM::instance();
-
     }
 
     /**
-     * The activation hook is called outside of the singleton because WordPress doesn't
+     * The activation & uninstall hooks are called outside of the singleton because WordPress doesn't
      * register the call from within the class hence, needs to be called outside and the
      * function also needs to be static.
      */
     register_activation_hook( __FILE__, array( 'EDD_SLM', 'activation' ) );
+    register_uninstall_hook( __FILE__, array( 'EDD_SLM', 'uninstall') );
 
     add_action( 'plugins_loaded', 'EDD_SLM_load' );
 
