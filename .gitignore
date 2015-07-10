@@ -37,11 +37,3 @@ dwsync.xml
 intermediate
 .idea
 cache
-
-# Bower, node etc.
-/bower_components
-/node_modules
-composer.phar
-#composer.lock
-.env.*.php
-.env.php
