@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:     EDD Software License Manager
- * Plugin URI:      http://flowdee.de
- * Description:     EDD Software License Manager
+ * Plugin URI:      http://coder.flowdee.de/edd-software-license-manager/
+ * Description:     Seamless integration between Easy Digital Downloads and Software License Manager.
  * Version:         1.0.0
  * Author:          flowdee
  * Author URI:      http://flowdee.de
