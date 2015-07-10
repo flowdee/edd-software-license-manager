@@ -3,7 +3,7 @@
 ## Description
 Seamless integration between Easy Digital Downloads and Software License Manager.
 
-[Official WordPress.org Plugin](http://wordpress.org/plugins/hearthstone-cards/)
+[Official WordPress.org Plugin](https://wordpress.org/plugins/edd-software-license-manager/)
 
 ## Features
 Extending the free version with support for:
