@@ -48,7 +48,7 @@ function edd_slm_settings( $settings ) {
 add_filter( 'edd_settings_extensions', 'edd_slm_settings', 1 );
 
 /*
- * API validation check
+ * API validation notice
  */
 function edd_slm_api_validation_notice() {
 
@@ -66,33 +66,17 @@ function edd_slm_api_validation_notice() {
 add_action('admin_notices', 'edd_slm_api_validation_notice');
 
 /*
- * Check if admin page is EDD relevant
+ * API validation
  */
 function edd_slm_api_validation() {
 
     $api_url = edd_get_option( 'edd_slm_api_url' );
     $api_secret = edd_get_option( 'edd_slm_api_secret' );
 
-    if ( !empty($api_url) && !empty($api_secret) ) {
+    if ( empty($api_url) || empty($api_secret) ) {
 
-        /* TODO: API Call and enhanced validation
-        $api_params = array(
-            'slm_action' => 'slm_create_new',
-            'secret_key' => $api_secret
-        );
-
-        $url = $api_url . '?' . http_build_query($api_params);
-
-        $response = wp_remote_get($url, array('timeout' => 20, 'sslverify' => false));
-        $body = json_decode(wp_remote_retrieve_body($response));
-
-        edd_slm_print_pretty($body);
-
-        return $body;
-        */
-
-        return true;
+        return false;
     }
 
-    return false;
+    return true;
 }

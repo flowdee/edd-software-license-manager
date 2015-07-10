@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: EDD Software License Manager\n"
-"POT-Creation-Date: 2015-07-05 17:05+0100\n"
-"PO-Revision-Date: 2015-07-05 17:15+0100\n"
+"POT-Creation-Date: 2015-07-10 08:50+0100\n"
+"PO-Revision-Date: 2015-07-10 08:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -22,27 +22,29 @@ msgstr ""
 
 #: includes/meta-boxes.php:32
 msgid "Enable licensing for this download."
-msgstr ""
+msgstr "Lizenzschlüssel für diesen Download aktivieren"
 
 #: includes/meta-boxes.php:37
 msgid "How many sites can be activated trough a single license key?"
-msgstr ""
+msgstr "Wie viele Seiten können mit diesem Lizenzschlüssel aktiviert werden?"
 
 #: includes/meta-boxes.php:64
 msgid "Sites allowed"
-msgstr ""
+msgstr "Anzahl erlaubter Seiten"
 
 #: includes/purchase.php:66
 msgid "License could not be created: Invalid sites allowed number."
 msgstr ""
+"Lizenzschlüssel konnte nicht erstellt werden: Ungültige Anzahl der erlaubten "
+"Seiten."
 
 #: includes/purchase.php:152
 msgid "License Key(s) generated"
-msgstr ""
+msgstr "Lizenzschlüssel erstellt"
 
 #: includes/purchase.php:159
 msgid "License Key(s) could not be created."
-msgstr ""
+msgstr "Lizenzschlüssel konnten nicht erstellt werden."
 
 #: includes/settings.php:25
 msgid "EDD Software License Manager Settings"
@@ -50,7 +52,7 @@ msgstr "EDD Software License Manager Einstellungen"
 
 #: includes/settings.php:26
 msgid "Configure EDD Software License Manager Settings"
-msgstr ""
+msgstr "EDD Software License Manager Einstellungen"
 
 #: includes/settings.php:31
 msgid "API URL"
@@ -61,6 +63,8 @@ msgid ""
 "Enter the url to the WordPress installation which hosts the Software License "
 "Manager plugin."
 msgstr ""
+"Die Adresse zu der WordPress Installation, mit dem aktivieren Software "
+"License Manager Plugin."
 
 #: includes/settings.php:38
 msgid "API Secret"
@@ -68,11 +72,13 @@ msgstr "API Secret"
 
 #: includes/settings.php:39
 msgid "Secret Key for License Creation"
-msgstr ""
+msgstr "Secret Key for License Creation"
 
 #: includes/settings.php:62
 msgid "Software License Manager API credentials missing or invalid."
 msgstr ""
+"Software License Manager API Zugangsdaten wurden nicht eingetragen oder sind "
+"fehlerhaft."
 
 #. Plugin Name of the plugin/theme
 #. Description of the plugin/theme

@@ -1,31 +1,26 @@
 === EDD Software License Manager ===
 Contributors: flowdee
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCQRWXARSHQTW
-Tags: edd, edd license, edd software license, software license, software license manager
+Tags: edd, edd license, edd software license, software license, software license manager, easy digital downloads, edd licensing
 Requires at least: 3.5.1
 Tested up to: 4.2.2
 Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Hearthstone Cards for WordPress adds an overlay to written card names and displays the associated image while hovering them.
+Seamless integration between Easy Digital Downloads and Software License Manager.
 
 == Description ==
-Hearthstone Cards for WordPress adds an overlay to written card names and displays the associated image while hovering them.
+Seamless integration between Easy Digital Downloads and Software License Manager.
 
 = Features =
 
-*   Use brackets e.g. [Flamewaker] or [Flamewaker gold] to convert your card names
-*   Supporting: Posts, Pages & Custom Post Types
-*   Adding overlay and displays the associated image while hovering card names
-*   Supporting the following card languages: English, French, German, Russian, Spanish & Portuguese (Brazil)
-*   Standard and gold (premium) card images available
-*   Show colored card names according to their rarity
-*   Configuration page for more options
-*   Visit the [plugin page](http://coder.flowdee.de/hearthstone-cards-for-wordpress/)
-*   Try out the online [demo](http://coder.flowdee.de/hearthstone-cards-for-wordpress/demo/)
-*   Well prepared and detailed [documentation](http://coder.flowdee.de/hearthstone-cards-for-wordpress/documentation/)
-*   Regular updates and improvements: Go though the [changelog](http://coder.flowdee.de/hearthstone-cards-for-wordpress/changelog/)
+* Automatically creates license keys for each sale with Easy Digital Downloads
+* Licensing is optional and can be activated/deactivated individually
+* Send generated license keys to your customers within your existing email notifications
+* Visit the [plugin page](http://coder.flowdee.de/edd-software-license-manager/)
+* Well prepared and detailed [documentation](http://coder.flowdee.de/edd-software-license-manager/documentation/)
+* Regular updates and improvements: Go though the [changelog](https://wordpress.org/plugins/edd-software-license-manager/changelog/)
 
 > <strong>Please note</strong><br>
 > This plugin is the seamless integration between Easy Digital Downloads and Software License Manager.
@@ -35,7 +30,7 @@ Hearthstone Cards for WordPress adds an overlay to written card names and displa
 = Support =
 
 * Read the [documentation](http://coder.flowdee.de/edd-software-license-manager/documentation/)
-* Browse [issue tracker](https://github.com/flowdee/hearthstone-cards-for-wordpress/issues) on GitHub
+* Browse [issue tracker](https://github.com/flowdee/edd-software-license-manager/issues) on GitHub
 * [Follow me on Twitter](https://twitter.com/flowdee) to stay in contact and informed
 
 = Credits =
@@ -72,24 +67,24 @@ The installation and configuration of the plugin is as simple as it can be.
 == Configuration ==
 The plugin is really simple and well structured so you don’t have to prepare a lot in order to get it working.
 
-1. After the successful installation you will find a prepared options page here: “Settings” > “Hearthstone Cards”
-2. Here you can temporary deactivate the Hearthstone Cards feature if necessary
-3. Some customization settings can be found within left metabox and described below
-4. Additionally you can find more essential and helpful links within the metaboxes on your right
-5. Use brackets e.g. [Druid of the Claw] to convert your card names within your WordPress pages or posts
+1. After the successful installation you will find a prepared options page here: “Downloads” > “Settings” > “Extensions”
+2. Enter your Software License Manager API credentials
+3. Go to your Downloads and activate licensing where it's required
 
 == Frequently Asked Questions ==
 
-= How does the plugin work? =
+= Is it necessary to install both plugins on the same WordPress installation? =
+No! That's one of the biggest benefits of this integration. Easy Digital Downloads and the Software License Manager can be installed on different sites.
 
-The plugin searches for Hearthstone card names within brackets e.g. [Druid of the Claw] and automatically adds an overlay to them.
-
-Basically take care of using correct special character according to your selected language.
+= Can I use this plugin to validate the generated license keys? =
+No! The license validation part for your distributed plugins and themes is not part of this plugin. Therefore please take a look into the Software License Manager documentation.
 
 == Screenshots ==
 
 1. Configuration screen
-2. Hearthstone Cards overlay in action
+2. Activating licensing for a download
+3. Output the generated license keys within your emails
+4. See your generated license keys within the license manager plugin
 
 == Changelog ==
 

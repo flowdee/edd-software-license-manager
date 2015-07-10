@@ -207,8 +207,6 @@ function edd_slm_get_variable_price_sites_allowed( $download_id = 0, $price_id =
 
     $prices = edd_get_variable_prices( $download_id );
 
-    //edd_slm_print_pretty($prices);
-
     if ( isset( $prices[ $price_id ][ 'edd_slm_sites_allowed' ] ) ) {
         return absint( $prices[ $price_id ][ 'edd_slm_sites_allowed' ] );
     }
