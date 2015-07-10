@@ -6,11 +6,11 @@ Seamless integration between Easy Digital Downloads and Software License Manager
 [Official WordPress.org Plugin](https://wordpress.org/plugins/edd-software-license-manager/)
 
 ## Features
-Extending the free version with support for:
-
 * Automatically creates license keys for each sale with Easy Digital Downloads
 * Licensing is optional and can be activated/deactivated individually
 * Send generated license keys to your customers within your existing email notifications
+
+> The license validation part for your distributed plugins and themes is not part of this plugin. Therefore please take a look into the Software License Manager documentation.
 
 ## More information
 
