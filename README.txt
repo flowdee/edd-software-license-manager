@@ -17,19 +17,16 @@ Seamless integration between Easy Digital Downloads and Software License Manager
 
 * Automatically creates license keys for each sale with Easy Digital Downloads
 * Licensing is optional and can be activated/deactivated individually
+* Normal and variable pricing supported
 * Send generated license keys to your customers within your existing email notifications
 * Visit the [plugin page](http://coder.flowdee.de/edd-software-license-manager/)
-* Well prepared and detailed [documentation](http://coder.flowdee.de/edd-software-license-manager/documentation/)
 * Regular updates and improvements: Go though the [changelog](https://wordpress.org/plugins/edd-software-license-manager/changelog/)
 
 > <strong>Please note</strong><br>
-> This plugin is the seamless integration between Easy Digital Downloads and Software License Manager.
->
 > The license validation part for your distributed plugins and themes is not part of this plugin. Therefore please take a look into the Software License Manager documentation.
 
 = Support =
 
-* Read the [documentation](http://coder.flowdee.de/edd-software-license-manager/documentation/)
 * Browse [issue tracker](https://github.com/flowdee/edd-software-license-manager/issues) on GitHub
 * [Follow me on Twitter](https://twitter.com/flowdee) to stay in contact and informed
 
@@ -88,10 +85,10 @@ No! The license validation part for your distributed plugins and themes is not p
 
 == Changelog ==
 
-= Version 1.0.0 (12th July 2015) =
+= Version 1.0.0 (17th July 2015) =
 * Initial release
 
 == Upgrade Notice ==
 
-= Version 1.0.0 (12th July 2015) =
+= Version 1.0.0 (17th July 2015) =
 * Initial release
