@@ -1,4 +1,5 @@
 # EDD Software License Manager
+![Plugin Version](https://img.shields.io/wordpress/plugin/v/edd-software-license-manager.svg "Plugin Version") ![WordPress Version Compatibility](https://img.shields.io/wordpress/v/edd-software-license-manager.svg "WordPress Version Compatibility") ![Downloads](https://img.shields.io/wordpress/plugin/dt/edd-software-license-manager.svg "Downloads") ![Rating](https://img.shields.io/wordpress/plugin/r/edd-software-license-manager.svg "Rating")
 
 ## Description
 Seamless integration between Easy Digital Downloads and Software License Manager.
