@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: EDD Software License Manager\n"
-"POT-Creation-Date: 2015-07-10 08:50+0100\n"
-"PO-Revision-Date: 2015-07-10 08:55+0100\n"
+"POT-Creation-Date: 2015-08-14 11:54+0100\n"
+"PO-Revision-Date: 2015-08-14 11:54+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -20,6 +20,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#: includes/emails.php:53
+msgid "Please get in contact to receive the license keys."
+msgstr ""
+"Bitte nimm Kontakt mit uns auf, um deine(n) Lizenzschlüssel zu erhalten."
+
 #: includes/meta-boxes.php:32
 msgid "Enable licensing for this download."
 msgstr "Lizenzschlüssel für diesen Download aktivieren"
@@ -32,19 +37,19 @@ msgstr "Wie viele Seiten können mit diesem Lizenzschlüssel aktiviert werden?"
 msgid "Sites allowed"
 msgstr "Anzahl erlaubter Seiten"
 
-#: includes/purchase.php:66
+#: includes/purchase.php:74
 msgid "License could not be created: Invalid sites allowed number."
 msgstr ""
 "Lizenzschlüssel konnte nicht erstellt werden: Ungültige Anzahl der erlaubten "
 "Seiten."
 
-#: includes/purchase.php:152
+#: includes/purchase.php:168
 msgid "License Key(s) generated"
 msgstr "Lizenzschlüssel erstellt"
 
-#: includes/purchase.php:159
+#: includes/purchase.php:175
 msgid "License Key(s) could not be created."
-msgstr "Lizenzschlüssel konnten nicht erstellt werden."
+msgstr "Lizenzschlüssel konnte nicht erstellt werden."
 
 #: includes/settings.php:25
 msgid "EDD Software License Manager Settings"
@@ -74,22 +79,39 @@ msgstr "API Secret"
 msgid "Secret Key for License Creation"
 msgstr "Secret Key for License Creation"
 
-#: includes/settings.php:62
+#: includes/settings.php:45
+msgid "Enable Debug"
+msgstr "Fehlersuche aktivieren"
+
+#: includes/settings.php:46
+msgid "Check the box to create a log file for debug purposes."
+msgstr "Markieren, um eine Protokolldatei für die Fehlersuche zu erstellen."
+
+#: includes/settings.php:68
 msgid "Software License Manager API credentials missing or invalid."
 msgstr ""
 "Software License Manager API Zugangsdaten wurden nicht eingetragen oder sind "
 "fehlerhaft."
 
 #. Plugin Name of the plugin/theme
-#. Description of the plugin/theme
 msgid "EDD Software License Manager"
 msgstr "EDD Software License Manager"
 
 #. Plugin URI of the plugin/theme
-#. Author URI of the plugin/theme
-msgid "http://flowdee.de"
-msgstr "http://flowdee.de"
+msgid "https://coder.flowdee.de/edd-software-license-manager/"
+msgstr "https://coder.flowdee.de/edd-software-license-manager/"
+
+#. Description of the plugin/theme
+msgid ""
+"Seamless integration between Easy Digital Downloads and Software License "
+"Manager."
+msgstr ""
+"Integration zwischen Easy Digital Downloads und dem Software License Manager."
 
 #. Author of the plugin/theme
 msgid "flowdee"
 msgstr "flowdee"
+
+#. Author URI of the plugin/theme
+msgid "http://flowdee.de"
+msgstr "http://flowdee.de"

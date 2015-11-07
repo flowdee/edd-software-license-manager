@@ -1,10 +1,10 @@
 === EDD Software License Manager ===
 Contributors: flowdee
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCQRWXARSHQTW
+Donate link: http://coder.flowdee.de/link/wishlist
 Tags: edd, edd license, edd software license, software license, software license manager, easy digital downloads, edd licensing
 Requires at least: 3.5.1
-Tested up to: 4.2.2
-Stable tag: 1.0.0
+Tested up to: 4.3.1
+Stable tag: 1.0.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -85,10 +85,16 @@ No! The license validation part for your distributed plugins and themes is not p
 
 == Changelog ==
 
+= Version 1.0.1 (7th November 2015) =
+* Fix: Email license key listing showed only the last item
+
 = Version 1.0.0 (17th July 2015) =
 * Initial release
 
 == Upgrade Notice ==
+
+= Version 1.0.1 (7th November 2015) =
+* Fix: Email license key listing showed only the last item
 
 = Version 1.0.0 (17th July 2015) =
 * Initial release

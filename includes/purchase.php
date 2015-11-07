@@ -19,7 +19,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 function edd_slm_on_complete_purchase( $payment_id ) {
 
     if ( EDD_SLM_API_URL != '' && EDD_SLM_API_SECRET != '' ) {
+
+        // Log
+        edd_slm_add_log( '--- License Key Creation - START ---', true );
+
+        // Ececute
         edd_slm_create_license_keys( $payment_id );
+
+        // Log
+        edd_slm_add_log( '--- License Key Creation - END ---' );
     }
 }
 add_action( 'edd_complete_purchase', 'edd_slm_on_complete_purchase' );
@@ -82,7 +90,7 @@ function edd_slm_create_license_keys( $payment_id ) {
                     $api_params['first_name'] = (isset($payment_meta['user_info']['first_name'])) ? $payment_meta['user_info']['first_name'] : '';
                     $api_params['last_name'] = (isset($payment_meta['user_info']['last_name'])) ? $payment_meta['user_info']['last_name'] : '';
                     $api_params['email'] = (isset($payment_meta['user_info']['email'])) ? $payment_meta['user_info']['email'] : '';
-                    $api_params['company_name'] = 'Company GmbH';
+                    $api_params['company_name'] = '';
                     $api_params['txn_id'] = $transaction_id . ' - ' . $item_name;
                     $api_params['max_allowed_domains'] = $sites_allowed;
                     $api_params['date_created'] = date('Y-m-d');
@@ -91,13 +99,21 @@ function edd_slm_create_license_keys( $payment_id ) {
                     // Send query to the license manager server
                     $url = EDD_SLM_API_URL . '?' . http_build_query($api_params);
 
-                    $response = wp_remote_get($url, array('timeout' => 20, 'sslverify' => false));
+                    $response = wp_remote_get($url, array('timeout' => 30));
+
+                    edd_slm_add_log( 'Item: ' . $item_name );
+                    edd_slm_add_log( '- SLM Response Body: ' . $response['body'] );
+
+                    foreach ($response['response'] as $key => $value) {
+                        edd_slm_add_log( '- SLM Response ' . $key .': ' . $value );
+                    }
 
                     // Get license key
                     $license_key = edd_slm_get_license_key( $response );
 
                     // Collect license keys
                     if ( $license_key ) {
+
                         $licenses[] = array(
                             'item' => $item_name,
                             'key' => $license_key

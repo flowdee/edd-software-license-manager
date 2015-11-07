@@ -39,6 +39,12 @@ function edd_slm_settings( $settings ) {
             'desc' => __( 'Secret Key for License Creation', 'edd-slm' ),
             'type' => 'text',
             'std' => ''
+        ),
+        array(
+            'id'   => 'edd_slm_debug',
+            'name' => __( 'Enable Debug', 'edd-slm' ),
+            'desc' => __( 'Check the box to create a log file for debug purposes.', 'edd-slm' ),
+            'type' => 'checkbox',
         )
     );
 

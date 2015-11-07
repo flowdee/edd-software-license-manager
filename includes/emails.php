@@ -32,7 +32,7 @@ add_action( 'edd_add_email_tags', 'edd_slm_email_add_license_tag' );
  */
 function edd_slm_email_replace_license_tag( $payment_id ) {
 
-    $output = false;
+    $output = '';
 
     // Check if licenses were generated
     $licenses = get_post_meta( $payment_id, '_edd_slm_payment_licenses', true );
@@ -42,13 +42,15 @@ function edd_slm_email_replace_license_tag( $payment_id ) {
 
             if ( isset( $license['item'] ) && isset( $license['key'] ) ) {
 
-                if ( $output ) {
+                if ( $output != '' ) {
                     $output .= '<br />';
                 }
 
-                $output = $license['item'] . ': ' . $license['key'];
+                $output .= $license['item'] . ': ' . $license['key'];
             }
         }
+    } else {
+        $output = __('Please get in contact to receive the license keys.', 'edd-slm');
     }
 
     return $output;
