@@ -84,6 +84,7 @@ if( !class_exists( 'EDD_SLM' ) ) {
 
             define( 'EDD_SLM_API_URL', $api_url );
             define( 'EDD_SLM_API_SECRET', edd_get_option( 'edd_slm_api_secret' ) );
+            define( 'EDD_SLM_API_LICENSE_TERM', edd_get_option( 'edd_slm_api_license_term' ) );
         }
 
 
