@@ -41,6 +41,21 @@ function edd_slm_settings( $settings ) {
             'std' => ''
         ),
         array(
+            'id' => 'edd_slm_api_license_term',
+            'name' => __( 'License Term', 'edd-slm' ),
+            'desc' => __( 'How long the license is valid', 'edd-slm' ),
+            'type' => 'select',
+            'options' => array ( '0000-00-00' => __('Forever', 'edd-slm'),
+                                  730         => __('Two Years', 'edd-slm'),
+                                  365         => __('One Year', 'edd-slm'),
+                                  180         => __('Six Months', 'edd-slm'),
+                                   90         => __('90 Days', 'edd-slm'),
+                                   60         => __('60 Days', 'edd-slm'),
+                                   30         => __('30 Days', 'edd-slm'),
+                           )
+            									
+        ),
+        array(
             'id'   => 'edd_slm_debug',
             'name' => __( 'Enable Debug', 'edd-slm' ),
             'desc' => __( 'Check the box to create a log file for debug purposes.', 'edd-slm' ),
