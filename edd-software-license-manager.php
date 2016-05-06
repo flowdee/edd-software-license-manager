@@ -26,6 +26,10 @@ if( !defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if( !class_exists( 'Easy Digital Downloads' ) ) {
+    return;
+}
+
 if( !class_exists( 'EDD_SLM' ) ) {
 
     /**
