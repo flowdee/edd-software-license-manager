@@ -94,12 +94,25 @@ function edd_slm_create_license_keys( $payment_id ) {
                     $api_params['txn_id'] = $transaction_id . ' - ' . $item_name;
                     $api_params['max_allowed_domains'] = $sites_allowed;
                     $api_params['date_created'] = date('Y-m-d');
-                    $api_params['date_expiry'] = '0000-00-00';
+                    if ((trim(EDD_SLM_API_LICENSE_TERM) == '') ||
+                        (EDD_SLM_API_LICENSE_TERM == __('Forever', 'edd-slm'))) {
+                    	$edd_slm_license_term = '0000-00-00';
+                    } else {
+                    	$timeExpire = new DateTime();
+                    	$timeExpire->modify("+" . EDD_SLM_API_LICENSE_TERM . " day");
+                    	$edd_slm_license_term = $timeExpire->format('Y-m-d');
+                    }
+                    $api_params['date_expiry'] = $edd_slm_license_term;
 
                     // Send query to the license manager server
                     $url = EDD_SLM_API_URL . '?' . http_build_query($api_params);
 
                     $response = wp_remote_get($url, array('timeout' => 30));
+
+					if (is_wp_error($response)) {  /* When there are SLM connectivity errors, an error is thrown here that 'breaks' WP. */
+  	                  edd_slm_add_log( 'Item: ' . $item_name );
+					  edd_slm_add_log( 'Error: ' . $response->get_error_message());
+					} else { /* I left the following block unchanged (indenting). */
 
                     edd_slm_add_log( 'Item: ' . $item_name );
                     edd_slm_add_log( '- SLM Response Body: ' . $response['body'] );
@@ -119,6 +132,7 @@ function edd_slm_create_license_keys( $payment_id ) {
                             'key' => $license_key
                         );
                     }
+					}
                 }
             }
 
