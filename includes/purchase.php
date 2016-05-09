@@ -91,7 +91,7 @@ function edd_slm_create_license_keys( $payment_id ) {
                     $api_params['last_name'] = (isset($payment_meta['user_info']['last_name'])) ? $payment_meta['user_info']['last_name'] : '';
                     $api_params['email'] = (isset($payment_meta['user_info']['email'])) ? $payment_meta['user_info']['email'] : '';
                     $api_params['company_name'] = '';
-                    $api_params['txn_id'] = $transaction_id . ' - ' . $item_name;
+                    $api_params['txn_id'] = apply_filters('set_edd_slm_transaction_id', $transaction_id . ' - ' . $item_name);
                     $api_params['max_allowed_domains'] = $sites_allowed;
                     $api_params['date_created'] = date('Y-m-d');
                     $api_params['date_expiry'] = '0000-00-00';
