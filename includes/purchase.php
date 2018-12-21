@@ -95,7 +95,7 @@ function edd_slm_create_license_keys( $payment_id ) {
                     $api_params['max_allowed_domains'] = $sites_allowed;
                     $api_params['date_created'] = date('Y-m-d');
                     $api_params['date_expiry'] = '0000-00-00';
-                    $api_params['product_ref'] = $download_data['post_title'];
+                    $api_params['product_ref'] = $download_data->post_title;
                     $api_params = apply_filters('edm_slm_api_params', $api_params );
 
                     // Send query to the license manager server
