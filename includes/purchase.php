@@ -54,7 +54,7 @@ function edd_slm_create_license_keys( $payment_id ) {
 
         if ( edd_slm_is_licensing_enabled( $download_id ) ) {
 
-            // Download data
+            // Download data (example: https://pastebin.com/raw/4u65tEMP )
             $download_data = edd_get_download( $download_id );;
 
             if ( $download_data ) {
@@ -95,9 +95,11 @@ function edd_slm_create_license_keys( $payment_id ) {
                     $api_params['max_allowed_domains'] = $sites_allowed;
                     $api_params['date_created'] = date('Y-m-d');
                     $api_params['date_expiry'] = '0000-00-00';
+                    $api_params['product_ref'] = $download_data->post_title;
+                    $api_params = apply_filters('edm_slm_api_params', $api_params );
 
                     // Send query to the license manager server
-                    $url = EDD_SLM_API_URL . '?' . http_build_query($api_params);
+                    $url = apply_filters('edm_slm_url',  EDD_SLM_API_URL . '?' . http_build_query($api_params) );
 
                     $response = wp_remote_get($url, array('timeout' => 30));
 
