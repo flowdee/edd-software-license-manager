@@ -1,6 +1,6 @@
 === EDD Software License Manager ===
 Contributors: flowdee
-Donate link: http://coder.flowdee.de/link/wishlist
+Donate link: https://github.com/sponsors/flowdee
 Tags: edd, edd license, edd software license, software license, software license manager, easy digital downloads, edd licensing
 Requires at least: 3.5.1
 Tested up to: 4.3.1
